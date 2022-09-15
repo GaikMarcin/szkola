@@ -19,7 +19,6 @@ body{
     grid-area: b;
     background-color: pink;
     width: 10vw;
-    height: 80vh;
 }
 .srodek{
     position: relative;
