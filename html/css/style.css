@@ -18,7 +18,7 @@ body{
 .lewo{
     grid-area: b;
     background-color: pink;
-    width: 10vw;
+    width: 10vw;s
 }
 .srodek{
     position: relative;
