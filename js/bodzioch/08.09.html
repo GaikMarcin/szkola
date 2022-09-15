@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="num1">Liczba 1: <input type="number" id="num1" value="2"/></label>
+        <label for="num1">Liczba 2: <input type="number" id="num1" value="2"/></label>
+        <input type="submit" value="Dodaj">
+    </form>
+    <p>Wynik</p>
+    <script>
+        const num1 = document.querySelector('#num1');
+        const num2 = document.querySelector('#num2');
+        const btn = document.querySelector('[type="submit"]');
+        const result = document.querySelector("p");
+        btn.addEventListener("click", function(evt){
+            // evt.preventDefault();
+            const num1Val = parseInt(num1.value);
+            const num2Val = parseInt(num2.value);
+            const wynik = num1Val + num2Val;
+            result.innerHTML = "wynik dodawania: " +wynik;
+        });
+            
+    </script>
+</body>
+</html>

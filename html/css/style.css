@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    'a a a'
+    'b c d';
+    height: 100vh;
+}
+.gora{
+    grid-area: a;
+    background-color: yellow;
+   width: 100vw;
+    height: 20vh;
+}
+.lewo{
+    grid-area: b;
+    background-color: pink;
+    width: 10vw;
+    height: 80vh;
+}
+.srodek{
+    position: relative;
+    grid-area: c;
+    background-color: blue;
+    width: 80vw;
+}
+.prawo{
+    grid-area: d;
+    background-color: green;
+    width:10vw ;
+}
+.obraz{
+    margin-top: 14%;
+    margin-left:14%
+}
+img{
+    margin-top:10px;
+    margin-right:10px;
+    width: 20%;
+    box-shadow: 5px 5px;
+}
+img:hover{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}

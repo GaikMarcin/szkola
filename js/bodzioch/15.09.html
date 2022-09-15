@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczki</title>
+    <style>
+      body {
+        width: 20%;
+        margin-left: 2em;
+      }
+      label {
+        display: block;
+        margin: 0.5em;
+      }
+      fieldset {
+        width: 50%;
+        margin: 1em auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Obliczki</h1>
+    <form action="#">
+      <label for="num1"
+        >Liczba 1
+        <input type="number" name="num1" id="num1" value="12" />
+      </label>
+      <label for="num2"
+        >Liczba 2
+        <input type="number" name="num2" id="num2" value="3" />
+      </label>
+      <fieldset>
+        <legend>Działanie</legend>
+        <label for="oper1">
+          suma <input type="radio" name="oper" id="oper1" value="+" /></label
+        ><label for="oper2"
+          >różnica
+          <input type="radio" name="oper" id="oper2" value="-" /></label
+        ><label for="oper3"
+          >iloczyn
+          <input type="radio" name="oper" id="oper3" value="*" /></label
+        ><label for="oper4"
+          >iloraz <input type="radio" name="oper" id="oper4" value="/"
+        /></label>
+      </fieldset>
+      <input type="submit" value="Licz" />
+    </form>
+    <p id="result"></p>
+    <script>
+      const num1 = document.querySelector('#num1');
+      const num2 = document.querySelector('#num2');
+      const dodawanie = document.querySelector('#oper1');
+      const roznica = document.querySelector('#oper2');
+      const iloczyn = document.querySelector('#oper3');
+      const iloraz = document.querySelector('#oper4');
+      const btn = document.querySelector('[type = "submit"]');
+
+      const result = document.querySelector("p");
+
+      btn.addEventListener("click",function(evt){
+        evt.preventDefault();
+        if(dodawanie.checked) {
+          const wynik =  parseInt(num1.value) + parseInt(num2.value);
+          result.innerHTML = wynik;
+        }
+        if(roznica.checked) {
+          const wynik =  parseInt(num1.value) - parseInt(num2.value);
+          result.innerHTML = wynik;
+        }
+        if(iloczyn.checked) {
+          const wynik =  parseInt(num1.value) * parseInt(num2.value);
+          result.innerHTML = wynik;
+        }
+        if(iloraz.checked) {
+          const wynik =  parseInt(num1.value) / parseInt(num2.value);
+          result.innerHTML = wynik;
+        }
+        
+      })
+
+      // dodawanie.addEventListener("click", function(evt){
+      //     // evt.preventDefault();
+      //     const num1Val = parseInt(num1.value);
+      //     const num2Val = parseInt(num2.value);
+      //     const wynik = num1Val + num2Val;
+      //     result.innerHTML = "wynik dodawania " +wynik;
+      // });
+      // roznica.addEventListener("click",function(odej){
+      //   const num1Val = parseInt(num1.value);
+      //   const num2Val = parseInt(num2.value);
+      //   const wynik = num1Val - num2Val;
+      //   result.innerHTML = "wynik odejmowania " +wynik;
+      // });
+      // iloczyn.addEventListener("click",function(ilocz){
+      //   const num1Val = parseInt(num1.value);
+      //   const num2Val = parseInt(num2.value);
+      //   const wynik = num1Val * num2Val;
+      //   result.innerHTML = "wynik mnożenia " +wynik;
+      // });
+      // iloraz.addEventListener("click",function(ilor){
+      //   const num1Val = parseInt(num1.value);
+      //   const num2Val = parseInt(num2.value);
+      //   const wynik = num1Val / num2Val;
+      //   result.innerHTML = "wynik dzielenia " +wynik;
+      // });
+  </script>
+</body>
