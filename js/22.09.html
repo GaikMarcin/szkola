@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myjnia Samochodowa</title>
+</head>
+<body>
+    <div>
+        <h1>Oblicz cenę mycia samochodu</h1>
+        <form action="">
+          <p>Wybierz rodzaj mycia: 
+          <label for="wash">
+            <select name="" id="wash" >
+              <option value="10" selected id="zwykle">mycie zwykłe</option>
+              <option value="15" id="piana">mycie + piana</option>
+              <option value="20" id="wosk">mycie + piana + wosk</option>
+            </select>
+          </p>
+            <p>
+              Pielęgnacja wnętrza?:
+              <label for="vacuum"
+                >odkurzanie: <input type="checkbox" name="vacuum" id="vacuum" value="10"
+              /></label>
+              <label for="clean"
+                >czyszczenie tapicerki:<input type="checkbox" name="vacuum" id="clean" value="40" 
+              /></label>
+            </p>
+          </label>
+          <input type="submit" value="Oblicz">
+          <input type="reset" value="Wyczyść">
+        </form>
+        <section></section>
+      </div>
+      <script>
+        
+        const wash = document.querySelector('select')
+        const clean = document.querySelectorAll('[type="checkbox"]')
+        const btn = document.querySelector('[type="submit"]')
+        const price= document.querySelector('section') 
+
+
+        btn.addEventListener('click', function(evt){
+            evt.preventDefault();
+            let totalPrice=0;
+            const washValue = parseFloat(wash.value)
+            totalPrice += washValue;
+                   console.log(clean)     
+            for (let i=0; i<clean.length; i++){
+                if(clean[i].checked){
+                    totalPrice+=parseFloat(clean[i].value)
+                }
+            }
+            price.innerHTML = 'przewidywana cena: <b>'+ totalPrice+ '</b>'
+        })
+    
+      </script>
+</body>
+</html>
