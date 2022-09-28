@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prostokąt</h1>
+    <form action="">
+        <input type="number" id="num1" placeholder="a">
+        <input type="number" id="num2" placeholder="h">
+        <!-- <input type="number" id="num3"> -->
+        <select>
+            <option value="pole" id="pole">pole</option>
+            <option value="obwód" id="obwód">obwód</option>
+            
+        </select>
+        <input type="submit" value="Oblicz">
+    </form>
+    <p id="result"></p>
+    <script>
+        const num1 = document.querySelector('#num1');
+        const num2 = document.querySelector('#num2');
+        // const num3 = document.querySelector('#num3');
+        const pole = document.querySelector('#pole');
+        const obwód = document.querySelector('#obwód');
+        const objętość = document.querySelector('#objętość');
+        const btn = document.querySelector('[type="submit"]');
+
+        btn.addEventListener("click",function(evt){
+            evt.preventDefault();
+            if(pole.selected){
+                const wynik= parseInt(num1.value) /2 * parseInt(num2.value);
+                result.innerHTML = wynik;
+            }
+            if(obwód.selected){
+                const wynik= parseInt(num1.value) + parseInt(num2.value) + parseInt(num2.value);
+                result.innerHTML = wynik;
+            }
+        })
+    </script>
+</body>
+</html>
