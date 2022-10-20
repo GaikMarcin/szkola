@@ -1,0 +1,39 @@
+*{
+    font-style: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.auto{
+    height: 250px;
+}
+.lewy,.prawy{
+    background-color: rgb(255,127,80);
+    color: white;
+    width: 50%;
+    height: 410px;
+}
+.lewy{
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+.prawy{
+    display: flex;
+    float: right;
+    
+}
+.baner,.glowny{
+    background-color: rgb(220, 220, 220);
+    text-align: center;
+}
+.dom,.znak{
+    height: 200px;
+    width: 200px;
+}
+.stopkap{
+    float: right;
+}
+table{
+    border: 1px solid orange;
+}
