@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blok{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            animation: obrot1 10s alternate infinite forwards;
+            position: fixed;
+            transform-origin: 100% 100%;
+        }
+        @keyframes obrot1{
+            0% {transform:rotate(0deg);}
+            9.99%{transform:rotate(90deg)}
+            10%{transform: translate(100%)rotate(0deg);}
+            19.99%{transform: translate(100%)rotate(90deg);}
+            20%{transform: translate(200%)rotate(0deg);}
+            29.99%{transform: translate(200%)rotate(90deg);}
+            30%{transform: translate(300%)rotate(00deg);}
+            39.99%{transform: translate(300%)rotate(90deg);}
+            40%{transform: translate(400%)rotate(0deg);}
+            49.99%{transform: translate(400%)rotate(90deg);}
+            50%{transform: translate(500%)rotate(0deg);}
+            59.99%{transform: translate(500%)rotate(90deg);}
+            60%{transform: translate(600%)rotate(0deg);}
+            69.99%{transform: translate(600%)rotate(90deg);}
+            70%{transform: translate(700%)rotate(0deg);}
+            79.99%{transform: translate(700%)rotate(90deg);}
+            80%{transform: translate(800%)rotate(0deg);}
+            89.99%{transform: translate(800%)rotate(90deg);}
+            90%{transform: translate(900%)rotate(0deg);}
+            100%{transform: translate(900%)rotate(90deg);}
+            
+        }
+        .gora{
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gora"></div>
+    <div class="blok"></div>
+</body>
+</html>
