@@ -1,0 +1,38 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#7D7F85 ;
+}
+header{
+    width: 800px;
+    margin: auto;
+}
+.lewy{
+    background-color: #1A3B98;
+    text-align: center;
+    height: 600px;
+    width: 20%;
+    float: left;
+}
+.prawy{
+    background-color: #C2C3C2;
+    text-align: center;
+    color:#886829 ;
+    height: 560px;
+    width: 80%;
+    padding-top:40px ;
+}
+footer{
+    background-color:#1A3B98;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+h2,a{
+    color:#AF0215;
+    text-decoration-line:none;
+}
+.index{
+    width: 500px;
+    align-items: center;
+    text-align: center;
+}

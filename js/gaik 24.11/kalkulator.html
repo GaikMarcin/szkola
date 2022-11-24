@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <section class="lewy">
+        <a href="index.html"><h2>BMI</h2></a>
+        <a href="kalkulator.html"><h2>Kalkulator</h2></a>
+    </section>
+    
+    <section class="prawy">
+        <form action="">
+            waga <input type="text" id="waga">
+            wzrost <input type="text" id="wzrost">
+            <input type="submit">
+        </form>
+        <p></p>
+    </section>
+
+    <footer>
+       <p>Autor strony: Marcin Gaik <i>00000000000</i></p>
+    </footer>
+    <script>
+        const waga = document.querySelector("#waga");
+        const wzrost = document.querySelector("#wzrost");
+        const btn = document.querySelector("[type='submit']");
+        const result = document.querySelector("p");
+        btn.addEventListener("click",function(evt){
+            evt.preventdefault();
+            const waga1 = parseInt(waga.value);
+            const wzrost1 = parseInt(wzrost.value);
+            const bmi = waga1/(wzrost1*wzrost1);
+            result.innerHTML = "Twój BMI = " + bmi;
+            if (bmi < 18,5){
+                document.write("Masz niedowage");
+            } else if( bmi < 24,9 ){
+                document.write("Waga w normie");
+            } else if( bmi < 29,9 ){
+                document.write("Masz nadwage");
+            } else if( bmi < 34,9 ){
+                document.write("Masz otyłość 1 stopnia");
+            }else if( bmi < 39,9 ){
+                document.write("Masz otyłość 2 stopnia");
+            }else if(bmi > 39,9){
+                document.write("Masz otyłość 3 stopnia");
+            }
+        })
+    </script>
+</body>
+</html>
